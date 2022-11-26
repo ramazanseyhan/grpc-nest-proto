@@ -10,6 +10,7 @@ service ProjectService {
 
 message CreateProjectRequest {
   string name = 1;
+  number userId = 2;
 }
 
 message CreateProjectResponse {
