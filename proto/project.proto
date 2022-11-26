@@ -6,11 +6,8 @@ service ProjectService {
   rpc CreateProject (CreateProjectRequest) returns (CreateProjectResponse) {}
 }
 
-// CreateProject
-
 message CreateProjectRequest {
   string name = 1;
-  int32 userId = 2;
 }
 
 message CreateProjectResponse {
