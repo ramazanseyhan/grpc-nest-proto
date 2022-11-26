@@ -4,7 +4,6 @@ package project;
 
 service ProjectService {
   rpc CreateProject (CreateProjectRequest) returns (CreateProjectResponse) {}
-  rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
 }
 
 // CreateProject
@@ -17,21 +16,4 @@ message CreateProjectResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 id = 3;
-}
-
-// FindOne
-
-message FindOneData {
-  int32 id = 1;
-  string name = 2;
-}
-
-message FindOneRequest {
-  int32 id = 1;
-}
-
-message FindOneResponse {
-  int32 status = 1;
-  repeated string error = 2;
-  FindOneData data = 3;
 }
